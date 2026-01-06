@@ -1,0 +1,681 @@
+/* USE FOR CUSTOM STYLE AND LAYOUT: */
+/* Add or adjust banners for organization */
+/* modern-normalize is taking care of the box-sizing,
+   which is still a standard way to design */
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    UTILITIES 
+* * * * * * * * * * * * * * * * * * * * * * * * */
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    TYPOGRAPHY 
+    For larger projects, consider using a type scale:
+    https://baseline.is/tools/type-scale-generator/
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {
+    --text-size-xs: 0.64rem;
+    --text-size-sm: 0.8rem;
+    --text-size-md: 1rem;
+    --text-size-lg: 1.25rem;
+    --text-size-xl: 1.56rem;
+    --text-size-2xl: 1.95rem;
+    --text-size-3xl: 2.44rem;
+    --text-size-4xl: 3.05rem;
+    --text-size-5xl: 3.81rem;
+}
+
+h1 {
+    font-size: var(--text-size-4xl);
+}
+
+h2 {
+    font-size: var(--text-size-3xl);
+}
+
+h3 {
+    font-size: var(--text-size-2xl);
+}
+
+h4 {
+    font-size-adjust: var(--text-size-xl);
+}
+
+.lead,
+.subtitle {
+    font-size: var(--text-size-lg);
+}
+
+p {
+    font-size: medium;
+    /* background: linear-gradient(135deg, #FF3CAC, #784BA0); */
+
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    STRUCTURE
+* * * * * * * * * * * * * * * * * * * * * * * * */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    background-color: #0B0B0D;
+    color: #EDEDED;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    COMPONENTS
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* 
+    IMAGES
+*/
+
+/* 
+    LINKS
+*/
+
+/* 
+    BUTTONS
+*/
+
+/* 
+    TABLES
+*/
+
+/* 
+    NAVIGATION
+    
+    /* === SIDE NAV OVERRIDES FOR DARK THEME === */
+
+.openbtn {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    color: #EDEDED;
+    cursor: pointer;
+    z-index: 900;
+}
+
+.openbtn:hover {
+    color: #FF3CAC;
+}
+
+.menu-button {
+    font-size: 36px !important;
+}
+
+.menu-text {
+    font-size: 12px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Background fade */
+.all-over-bkg {
+    display: none;
+}
+
+.is-visible {
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 15000;
+    display: block;
+}
+
+/* Side Navigation */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 16000;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.4s ease;
+    background: #111;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Nav items */
+.sidenav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav li {
+    list-style: none;
+}
+
+.sidenav a {
+    padding: 10px 32px;
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-family: "JetBrains Mono", monospace;
+    color: #EDEDED;
+    transition: 0.2s ease;
+}
+
+.sidenav a:hover {
+    color: #FF3CAC;
+}
+
+/* Close button */
+.sidenav .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.openbtn:hover .menu-button {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.openbtn:hover .menu-text {
+    color: #FF3CAC;
+    transition: color 0.3s ease;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    PAGE SPECIFIC
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+section {
+    padding: 4rem 1rem;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 140px 20px 80px;
+    transform: translateY(40px);
+}
+
+.hero h1 {
+    font-size: var(--text-size-5xl);
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.accent-line {
+    position: relative;
+    height: 4px;
+    width: 110px;
+    background: #222;
+    border-radius: 6px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+
+.accent-line::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #FF3CAC, #784BA0, #2B86C5);
+    animation: slide 2s infinite ease-in-out;
+}
+
+/* CREDIT FOR THE ANIMATION ↓ */
+/* https://www.youtube.com/watch?v=zadj2i5wUyc */
+
+@keyframes slide {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+/* INDEX.HTML */
+/* QUICK FACTS */
+.quick-facts {
+    display: flex;
+    gap: 1.5rem;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.fact-card-wrapper {
+    background: linear-gradient(135deg, #FF3CAC, #784BA0, #2B86C5);
+    padding: 3px;
+    border-radius: 14px;
+    flex: 1 1 280px;
+    display: flex;
+}
+
+.fact-card {
+    background: #111;
+    padding: 1.5rem 2rem;
+    border-radius: 14px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-6px);
+}
+
+.fact-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.fact-card p {
+    opacity: 0.9;
+}
+
+/* CONTENT GRID */
+.content-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.about {
+    flex: 1;
+    line-height: 1.8;
+    max-width: 450px;
+}
+
+.headshot img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+}
+
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* ANIMATIONS */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeIn 0.7s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (width < 768px) {
+    .quick-facts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headshot img {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .content-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .about {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .headshot img {
+        width: 75%;
+        border-radius: 12px;
+    }
+}
+
+/* ABOUT.HTML */
+
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    flex-wrap: wrap;
+    /* stacks on mobile */
+}
+
+.profile-collage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.0rem;
+    max-width: 500px;
+    flex: 1 1 60%;
+}
+
+.collage-img {
+    width: 48%;
+    border-radius: 12px;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info {
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    text-align: left;
+}
+
+.bio-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.section-divider {
+    height: 2px;
+    width: 50px;
+    margin: 2rem auto;
+    background: linear-gradient(135deg, #FF3CAC, #784BA0);
+    border-radius: 2px;
+}
+
+
+
+.bio-section {
+    text-align: center;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+
+.skills-section {
+    text-align: center;
+}
+
+
+.skills-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.skill-card {
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.skill-card.language {
+    background: linear-gradient(135deg, #FF3CAC, #784BA0);
+}
+
+.skill-card.tool {
+    background: linear-gradient(135deg, #3A8DFF, #00C6FF);
+}
+
+.skill-card.lifestyle {
+    background: linear-gradient(135deg, #00C853, #B2FF59);
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+}
+
+/* PROJECTS.HTML */
+
+.project-section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 5rem;
+}
+
+.project-card {
+    background: #111;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 2px solid #222;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #5a7dff;
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.project-info p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.project-links a {
+    color: #5a7dff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT.HTML */
+
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    transition: 0.25s ease;
+    justify-content: center;
+}
+
+.contact-row i {
+    font-size: var(--text-size-lg);
+    opacity: 0.9;
+}
+
+.contact-row a {
+    text-decoration: none;
+    font-size: var(--text-size-lg);
+    color: white;
+    opacity: 0.85;
+    transition: 0.25s ease;
+}
+
+.contact-row:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-row:hover a {
+    opacity: 1;
+}
+
+@media (width < 768px) {
+    .contact-section {
+        padding: 40px 15px;
+    }
+}
+
+/* RESUME.HTML */
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.resume-category {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.professional-experience,
+.extracurricular-activities,
+.certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.experience,
+.extracurricular,
+.certificate {
+    background: #1a1a1a;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #2c2c2c;
+    transition: 0.2s ease;
+}
+
+.experience:hover,
+.extracurricular:hover,
+.certificate:hover {
+    border-color: #6f42ff;
+    transform: translateY(-3px);
+}
+
+.experience p,
+.extracurricular p,
+.certificate p {
+    margin: 3px 0;
+    opacity: 0.9;
+    font-size: var(--text-size-md)
+}
+
+.experience li,
+.extracurricular li {
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+    opacity: 0.95;
+}
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+    MEDIA QUERIES 
+* * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (width >=576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (width < 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (width >=992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (width >=1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (width >=1400px) {}
